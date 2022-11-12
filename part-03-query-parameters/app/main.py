@@ -35,7 +35,7 @@ def root() -> dict:
     """
     Root GET
     """
-    return {"msg": "Hello, World!"}
+    return {"msg": "Hello, World from FastAPI!"}
 
 
 @api_router.get("/recipe/{recipe_id}", status_code=200)

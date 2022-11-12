@@ -11,7 +11,7 @@ def root() -> dict:
     """
     Root GET
     """
-    return {"msg": "Hello, World!"}
+    return {"msg": "Hello, World from FastAPI!"}
 
 
 app.include_router(api_router)

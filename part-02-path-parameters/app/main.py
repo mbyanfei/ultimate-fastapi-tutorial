@@ -33,16 +33,17 @@ def root() -> dict:
     """
     Root GET
     """
-    return {"msg": "Hello, World!"}
+    return {"msg": "Hello, World! from fastapi!!"}
 
 
 # New addition, path parameter
 # https://fastapi.tiangolo.com/tutorial/path-params/
 @api_router.get("/recipe/{recipe_id}", status_code=200)
-def fetch_recipe(*, recipe_id: int) -> dict:
+def fetch_recipe(*, recipe_id: str) -> dict:
     """
     Fetch a single recipe by ID
     """
+    print(type(recipe_id))  # ADDED
 
     result = [recipe for recipe in RECIPES if recipe["id"] == recipe_id]
     if result:
